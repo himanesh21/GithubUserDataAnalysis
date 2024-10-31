@@ -55,7 +55,7 @@ def get_user_repositories(username,):
 
 # Write users.csv
 def write_users_csv(users):
-    with open('User.csv', mode='w', newline='', encoding='utf-8') as file:
+    with open('user.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['login', 'name', 'company', 'location', 'email', 'hireable', 'bio', 'public_repos', 'followers', 'following', 'created_at'])
         for user in users:
@@ -74,7 +74,7 @@ def write_users_csv(users):
             ])
 
 def write_repositories_csv(repositories):
-    with open('Repositories.csv', mode='w', newline='', encoding='utf-8') as file:
+    with open('repositories.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['login', 'full_name', 'created_at', 'stargazers_count', 'watchers_count', 'language', 'has_projects', 'has_wiki', 'license_name'])
         for repo in repositories:
